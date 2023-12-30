@@ -492,7 +492,7 @@ def new_df(assets, index_sel, risk_free):
 
     # Compute the risk-free asset
     if risk_free == "":
-        rf = df.iloc[:, -3]
+        rf = df.iloc[:, -2]
     else:
         rf = float(risk_free) / 100
 
