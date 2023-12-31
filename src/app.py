@@ -357,7 +357,7 @@ def update_graph(assets, index_sel, risk_free,
     ptf_tipp, dd, list_ret = new_tipp(df_port, rf, capInit, capInj, capSel, lockin, risky, floor)
 
 
-    fig = make_subplots(y_title="Value ($)", column_titles=["Performance"])
+    fig = make_subplots(y_title="Value (CHF)", column_titles=["Performance"])
     fig.add_trace(go.Scatter(x=ptf_tipp.index, y=ptf_tipp.BH, name="Risk portfolio", line=dict(color="#0072BD")))
     fig.add_trace(go.Scatter(x=ptf_tipp.index, y=ptf_tipp.TIPP, name="TIPP", line=dict(color="#77AC30")))
     fig.add_trace(go.Scatter(x=ptf_tipp.index, y=ptf_tipp.Floor, name="Floor", line=dict(color="#A2142F")))
@@ -388,7 +388,7 @@ def update_graph2(assets, index_sel, risk_free,
     ptf_tipp, dd, list_ret = new_tipp(df_port, rf, capInit, capInj, capSel, lockin, risky, floor)
 
 
-    fig = make_subplots(y_title="Value (%)", column_titles=["Drawdown"])
+    fig = make_subplots(y_title="Drawdown", column_titles=["Drawdown"])
     fig.add_trace(go.Scatter(x=ptf_tipp.index, y=dd.BH, name="Risk portfolio", line=dict(color="#0072BD")), row=1, col=1)
     fig.add_trace(go.Scatter(x=ptf_tipp.index, y=dd.TIPP, name="TIPP", line=dict(color="#77AC30")), row=1, col=1)
     return fig
@@ -416,7 +416,7 @@ def update_graph3(assets, index_sel, risk_free,
     ptf_tipp, dd, list_ret = new_tipp(df_port, rf, capInit, capInj, capSel, lockin, risky, floor)
 
 
-    fig = make_subplots(y_title="Value ($)", column_titles=["Capital Injection"])
+    fig = make_subplots(y_title="Value (CHF)", column_titles=["Capital Injection"])
     fig.add_trace(go.Scatter(x=ptf_tipp.index, y=ptf_tipp["Capital Injection"].cumsum(), line=dict(color="#0072BD")))
     #fig.update_yaxes("Value ($)", row=3)
     return fig
