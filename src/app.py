@@ -316,7 +316,7 @@ app.layout = html.Div(style={"backgroundColor":"white"},
 
                 html.H4("Enter the minimum and maximum % in risky asset:", style={"font-family":font}),
                 dcc.RangeSlider(min=0, max=200, step=1,
-                                value=[0, 100],
+                                value=[20, 100],
                                 marks={i:f"{i}%" for i in range(0, 201, 10)},
                                 id="risky_selection",
                                 tooltip={"placement": "bottom", "always_visible": True}),
